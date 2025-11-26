@@ -20,8 +20,8 @@
 #SBATCH --error=logs/humann3_%A_%a.err
 
 # --- 1. Source configuration ---
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "${SCRIPT_DIR}/../../config.sh"
+# Use SLURM_SUBMIT_DIR (directory where sbatch was run) to find config
+source "${SLURM_SUBMIT_DIR}/config.sh"
 
 # --- 2. Create logs directory if it doesn't exist ---
 mkdir -p "$LOGS_DIR"

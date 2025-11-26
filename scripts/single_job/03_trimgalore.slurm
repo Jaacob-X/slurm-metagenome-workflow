@@ -30,8 +30,8 @@ set -e
 echo "--- Job started on $(hostname) at $(date) ---"
 
 # --- 1. Source configuration ---
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "${SCRIPT_DIR}/../../config.sh"
+# Use SLURM_SUBMIT_DIR (directory where sbatch was run) to find config
+source "${SLURM_SUBMIT_DIR}/config.sh"
 
 # --- 2. DEFINE DIRECTORIES ---
 # Input directory containing the raw, compressed FASTQ files (from download step)

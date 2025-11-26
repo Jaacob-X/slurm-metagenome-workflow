@@ -32,8 +32,8 @@ module load miniforge3
 conda activate kraken2.1.3
 
 # --- 2. Source configuration ---
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "${SCRIPT_DIR}/../../config.sh"
+# Use SLURM_SUBMIT_DIR (directory where sbatch was run) to find config
+source "${SLURM_SUBMIT_DIR}/config.sh"
 
 # --- 3. Create directories ---
 mkdir -p "$KRAKEN2_DIR"

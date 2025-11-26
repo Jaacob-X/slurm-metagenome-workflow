@@ -26,8 +26,8 @@ module load miniforge3
 conda activate sra-tools
 
 # --- 2. Source configuration ---
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "${SCRIPT_DIR}/../../config.sh"
+# Use SLURM_SUBMIT_DIR (directory where sbatch was run) to find config
+source "${SLURM_SUBMIT_DIR}/config.sh"
 
 echo "Output directory is: $RAW_DATA_DIR"
 echo "SRR list file is: $SAMPLE_LIST"

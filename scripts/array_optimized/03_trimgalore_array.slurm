@@ -32,8 +32,8 @@ module load FastQC
 module load trimgalore/0.6.10
 
 # --- 2. Source configuration ---
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "${SCRIPT_DIR}/../../config.sh"
+# Use SLURM_SUBMIT_DIR (directory where sbatch was run) to find config
+source "${SLURM_SUBMIT_DIR}/config.sh"
 
 # --- 3. Create directories ---
 mkdir -p "$TRIMMED_DIR"
