@@ -175,7 +175,7 @@ fi
 # Define step dependencies
 declare -A DEPENDENCIES
 DEPENDENCIES[fastqc]="download"
-DEPENDENCIES[trimgalore]="download fastqc"
+DEPENDENCIES[trimgalore]="download"
 DEPENDENCIES[kneaddata]="trimgalore"
 DEPENDENCIES[kraken2]="kneaddata"
 DEPENDENCIES[humann3]="kneaddata"
