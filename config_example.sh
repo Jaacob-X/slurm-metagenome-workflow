@@ -175,7 +175,8 @@ validate_config() {
     fi
 
     # Check if database paths exist
-    if [[ ! -d "$KNEADDATA_DB" ]]; then
+    # KNEADDATA_DB is a bowtie2 index prefix, not a directory - check if index files exist
+    if ! ls "${KNEADDATA_DB}".*.bt2 &>/dev/null; then
         echo "WARNING: Kneaddata database not found: $KNEADDATA_DB"
     fi
 
