@@ -7,10 +7,10 @@
 # PROJECT SETTINGS
 #================================================================
 
-PROJECT_ID=""
-BASE_DIR=""
-DATABASE_DIR=""
-SAMPLE_LIST=""
+PROJECT_ID="your_project"
+BASE_DIR="/path/to/your/project"
+DATABASE_DIR="/path/to/databases"
+SAMPLE_LIST="/path/to/samples.txt"
 NUM_SAMPLES=1
 
 #================================================================
@@ -62,8 +62,8 @@ KNEADDATA_MEM=32G
 KNEADDATA_TIME=12:00:00
 
 # Kraken2
-KRAKEN2_CPUS=16
-KRAKEN2_MEM=64G
+KRAKEN2_CPUS=32
+KRAKEN2_MEM=128G
 KRAKEN2_TIME=8:00:00
 
 # HUMAnN3
