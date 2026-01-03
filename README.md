@@ -1,5 +1,7 @@
 # Metagenome Analysis Pipeline for SLURM
 
+Work Done by Jacob(Jingchu) Xu and Charles(Hao) Chen
+
 A comprehensive metagenome analysis pipeline designed for HPC clusters using SLURM job arrays.
 
 > ⚠️ **SYSTEM-SPECIFIC NOTICE**: These scripts are specifically designed for the **Mass General Brigham (MGB) ERISTwo HPC system**. Module loading commands, partition names, and paths are configured for ERISTwo. See [Portability](#portability-to-other-hpc-systems) for adapting to other systems.
